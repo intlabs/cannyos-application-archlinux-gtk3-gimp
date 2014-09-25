@@ -56,7 +56,7 @@ sudo rm -r -f "/CannyOS/build/cannyos-application-archlinux-gtk3-gimp/*"
 sudo docker stop cannyos-application-archlinux-gtk3-gimp
 
 # Launch built base container image
-sudo docker run -i -t --rm \
+sudo docker run -i -t -d \
  --privileged=true --lxc-conf="native.cgroup.devices.allow = c 10:229 rwm" \
  --volume "/CannyOS/build/cannyos-application-archlinux-gtk3-gimp":"/CannyOS/Host" \
  --name "cannyos-application-archlinux-gtk3-gimp" \
