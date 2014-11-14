@@ -39,7 +39,7 @@ RUN pacman -Sy --noconfirm && \
 	tar zxvf package-query.tar.gz && \
 	cd package-query && \
 	pacman -Sy --noconfirm binutils && \
-	pacman -Sy --noconfirm base-devel && \
+	pacman -Sy --noconfirm base-devel python python2 && \
 	makepkg -s --asroot --noconfirm && \
 	pacman --noconfirm -U *.xz && \
 	curl -O https://aur.archlinux.org/packages/ya/yaourt/yaourt.tar.gz && \
